@@ -22,7 +22,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->primary('user_id');
+            $table->primary('id');
         });
     }
 

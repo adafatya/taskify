@@ -22,9 +22,9 @@ return new class extends Migration
             $table->boolean('is_deleted');
             $table->timestamps();
 
-            $table->primary('task_id');
-            $table->foregin('project_id')->references('id')->on('projects');
-            $table->foreign('asignee_id')->references('id')->on('user_id');
+            $table->primary('id');
+            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('asignee_id')->references('id')->on('users');
             $table->index('is_deleted');
         });
     }
